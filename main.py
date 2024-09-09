@@ -26,8 +26,8 @@ person.update ('city: Paris')
     #problem 4
 del person["age"]
     #problem 5
-
-
+for key, value in person.items():
+    print (f"{key}: {value}")
 # -----------------------------------------------------------------------------
 
 
