@@ -1,10 +1,22 @@
 # ------------------------------------------------------------------------
 
 # Lab 1
-# Problem 1
-# Put your solution here, make sure I can run it by running this file. Do not submit it commented out.
+# Exercise 1
+    #problem 1
+my_list = [1,5, 'apple', 20.5]
+    #problem 2
+print (my_list['apple'])
+    #problem 3
+my_list.append(10)
+print (my_list)
+    #problem 4
+my_list.remove('20.5')
+print (my_list)
+    #problem 5
+my_list.reverse()
+print(my_list)
 
-# Problem 2
+# Exercise 2
 # Put your solution here, make sure I can run it by running this file. Do not submit it commented out.
 
 # -----------------------------------------------------------------------------
@@ -94,6 +106,10 @@ def word_lengths(words: list) -> list:
     Returns:
     - list: A list containing the lengths of the words
     """
+    lengths = []
+    for word in words:
+        lengths.append(len(word))
+    return lengths
     # TODO: Implement this function
     pass
 
