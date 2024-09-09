@@ -17,7 +17,16 @@ my_list.reverse()
 print(my_list)
 
 # Exercise 2
-# Put your solution here, make sure I can run it by running this file. Do not submit it commented out.
+    #problem 1
+person = {'name': 'John', 'age': 30, 'job': 'teacher'}
+    #problem 2
+print(person ["job"])
+    #problem 3
+person.update ('city: Paris')
+    #problem 4
+del person["age"]
+    #problem 5
+
 
 # -----------------------------------------------------------------------------
 
