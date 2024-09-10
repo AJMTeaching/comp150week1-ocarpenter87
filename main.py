@@ -30,6 +30,7 @@ for key, value in person.items():
     print (f"{key}: {value}")
 # -----------------------------------------------------------------------------
 
+# HOMEWORK
 
 # Importing sys for test function
 import sys
@@ -54,9 +55,15 @@ def count_vowels(s: str) -> int:
     Returns:
     - int: The number of vowels in the string
     """
+    
     # TODO: Implement this function
     pass
-
+    vowel_count = 0
+    for char in s:
+        if char in s:
+            vowel_count += 1
+    return vowel_count
+        
 
 # Unit Tests for count_vowels
 def test_count_vowels():
@@ -84,6 +91,7 @@ def merge_lists(list1: list, list2: list) -> list:
     Returns:
     - list: A new sorted list containing all elements from list1 and list2
     """
+    
     # TODO: Implement this function
     pass
 
@@ -119,9 +127,6 @@ def word_lengths(words: list) -> list:
     for word in words:
         lengths.append(len(word))
     return lengths
-    # TODO: Implement this function
-    pass
-
 
 # Unit Tests for word_lengths
 def test_word_lengths():
@@ -146,8 +151,10 @@ def reverse_string(s: str) -> str:
     Returns:
     - str: The reversed string
     """
-    # TODO: Implement this function
-    pass
+    reversed_str = ""
+    for char in s:
+        reversed_str = char + reversed_str
+    return reversed_str
 
 
 # Unit Tests for reverse_string
@@ -175,8 +182,15 @@ def intersection(list1: list, list2: list) -> list:
     Returns:
     - list: The intersection of the two lists
     """
-    # TODO: Implement this function
-    pass
+    count_dict = {}
+    result = []
+
+    for item in list1:
+        count_dict[item] = count_dict.get[item] = count_dict.get(item, 0) + 1
+    for item in list2:
+        if item in count_dict and count_dict[item] > 0:
+            result.append(item)
+            count_dict[item] -= 1
 
 
 # Unit Tests for intersection
