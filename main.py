@@ -5,26 +5,28 @@
     #problem 1
 my_list = [1,5, 'apple', 20.5]
     #problem 2
-print (my_list['apple'])
+print(my_list[2])
     #problem 3
 my_list.append(10)
-print (my_list)
+print(my_list)
     #problem 4
-my_list.remove('20.5')
-print (my_list)
+my_list.remove(20.5)
+print(my_list)
     #problem 5
-my_list.reverse()
+my_list = my_list[::-1]
 print(my_list)
 
 # Exercise 2
     #problem 1
 person = {'name': 'John', 'age': 30, 'job': 'teacher'}
     #problem 2
-print(person ["job"])
+print(person.get ('job'))
     #problem 3
-person.update ('city: Paris')
+person.update({'city': 'Paris'})
+print(person)
     #problem 4
 del person["age"]
+print(person)
     #problem 5
 for key, value in person.items():
     print (f"{key}: {value}")
@@ -55,12 +57,10 @@ def count_vowels(s: str) -> int:
     Returns:
     - int: The number of vowels in the string
     """
-    
-    # TODO: Implement this function
-    pass
+    vowels = 'aeiouAIEOU'
     vowel_count = 0
     for char in s:
-        if char in s:
+        if char in vowels:
             vowel_count += 1
     return vowel_count
         
@@ -196,15 +196,11 @@ def intersection(list1: list, list2: list) -> list:
     Returns:
     - list: The intersection of the two lists
     """
-    count_dict = {}
-    result = []
-
+    overlapped_list = []
     for item in list1:
-        count_dict[item] = count_dict.get[item] = count_dict.get(item, 0) + 1
-    for item in list2:
-        if item in count_dict and count_dict[item] > 0:
-            result.append(item)
-            count_dict[item] -= 1
+        if item in list2:
+            overlapped_list.append(item)
+    return list(set(overlapped_list))
 
 
 # Unit Tests for intersection
